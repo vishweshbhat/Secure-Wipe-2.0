@@ -186,8 +186,4 @@ python main.py
 
 MIT License. See LICENSE file.
 
----
 
-## Acknowledgments
-
-Based on initial work from [Original Repo Link]; extended and modified for Smart India Hackathon 2025.

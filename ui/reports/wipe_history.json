@@ -5,5 +5,12 @@
         "deleted_at": "2025-09-13T10:17:24.333475Z",
         "json_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\Final Rubrics Sheet ( To be printed ).pdf_wipe_report.json",
         "pdf_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\Final Rubrics Sheet ( To be printed ).pdf_wipe_report.pdf"
+    },
+    {
+        "file_name": "sample_output_ai_proj.pdf",
+        "file_hash": "88a1a35e9f0b9353e5aeff53ca86446f47bc459c0256fe5343f3d5a31067bbdc",
+        "deleted_at": "2025-09-13T17:20:30.893680Z",
+        "json_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\sample_output_ai_proj.pdf_wipe_report.json",
+        "pdf_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\sample_output_ai_proj.pdf_wipe_report.pdf"
     }
 ]

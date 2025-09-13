@@ -1,7 +1,8 @@
 import os
 import json
 
-REPORTS_DIR = os.path.join(os.getcwd(), "reports")
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'ui'))
+REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 HISTORY_FILE = os.path.join(REPORTS_DIR, "wipe_history.json")

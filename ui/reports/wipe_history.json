@@ -12,5 +12,12 @@
         "deleted_at": "2025-09-13T17:20:30.893680Z",
         "json_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\sample_output_ai_proj.pdf_wipe_report.json",
         "pdf_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\sample_output_ai_proj.pdf_wipe_report.pdf"
+    },
+    {
+        "file_name": "test_chair_img (1).jpeg",
+        "file_hash": "0c5fc7f9444bfaa49395be509fcb0e790c8b840867b7c7239164ca0a9be74cd7",
+        "deleted_at": "2025-09-14T19:24:37.387851Z",
+        "json_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\test_chair_img (1).jpeg_wipe_report.json",
+        "pdf_report_path": "C:\\Users\\vishw\\Desktop\\SecureWipe-Tool\\ui\\reports\\test_chair_img (1).jpeg_wipe_report.pdf"
     }
 ]

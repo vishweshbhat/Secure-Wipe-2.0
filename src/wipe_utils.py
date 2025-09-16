@@ -75,11 +75,48 @@ def wipe_partition(partition_path):
         print(f"[wipe_utils] Partition wipe failed: {e}")
         return False
 
-def wipe_os():
+
+def wipe_os(disk_device="/dev/sda"):
+    """
+    Perform a NIST SP 800-88 compliant full wipe (Clear) on the OS disk.
+
+    WARNING: This destroys ALL data on the specified disk irreversibly.
+    Make sure this is run ONLY from a live boot environment outside the target disk OS.
+    """
     try:
-        print("[wipe_utils] Simulating wiping entire operating system!")
-        # Real implementation is dangerous!
+        print(f"[wipe_os] Starting full disk wipe on {disk_device} ...")
+
+        # NIST SP 800-88 Clear method with 3 passes: random, zeros, random.
+        passes = [
+            "/dev/urandom",
+            "/dev/zero",
+            "/dev/urandom"
+        ]
+
+        for idx, pattern in enumerate(passes):
+            print(f"[wipe_os] Starting pass {idx+1} with pattern {pattern} ...")
+            # Use dd to overwrite disk
+            subprocess.run(
+                [
+                    "dd",
+                    f"if={pattern}",
+                    f"of={disk_device}",
+                    "bs=1M",
+                    "status=progress",
+                    "conv=fsync"
+                ],
+                check=True
+            )
+            print(f"[wipe_os] Pass {idx+1} complete.")
+
+        print(f"[wipe_os] Full disk wipe complete for {disk_device}.")
         return True
-    except Exception as e:
-        print(f"[wipe_utils] OS wipe failed: {e}")
+
+    except subprocess.CalledProcessError as e:
+        print(f"[wipe_os] Error during disk wipe: {e}")
         return False
+
+    except Exception as e:
+        print(f"[wipe_os] Unexpected error: {e}")
+        return False
+
